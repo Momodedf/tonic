@@ -110,7 +110,7 @@ class ApiResource
      * Execute the resource, that is, find the correct resource method to call
      * based upon the request and then call it.
      *
-     * @return Tonic\Response
+     * @return \Tonic\Response
      */
     public function exec()
     {
