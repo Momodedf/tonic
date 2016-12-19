@@ -8,10 +8,12 @@ namespace Tonic;
 class Autoloader
 {
     private $namespace;
+    private $basePath;
 
-    public function __construct($namespace = null)
+    public function __construct($namespace = null, $basePath = null)
     {
         $this->namespace = $namespace;
+        $this->basePath = (is_null($basePath)) ? dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR : $basePath;
 
         ini_set('unserialize_callback_func', 'spl_autoload_call');
         spl_autoload_register(array($this, 'autoload'));
@@ -21,10 +23,10 @@ class Autoloader
      * Handles autoloading of classes
      * @param string $className Name of the class to load
      */
-    public function autoload($className)
+    private function autoload($className)
     {
         if ($this->namespace == null || $this->namespace.'\\' === substr($className, 0, strlen($this->namespace.'\\'))) {
-            $fileName = dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR;
+            $fileName = $this->basePath;
             $namespace = '';
             if (false !== ($lastNsPos = strripos($className, '\\'))) {
                 $namespace = substr($className, 0, $lastNsPos);
