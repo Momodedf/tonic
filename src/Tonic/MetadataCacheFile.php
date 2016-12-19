@@ -36,7 +36,7 @@ class MetadataCacheFile implements MetadataCache
 
     /**
      * Save resource metadata to disk
-     * @param  str[]   $resources Resource metadata
+     * @param  str[]   $resources ApiResource metadata
      * @return boolean
      */
     public function save($resources)

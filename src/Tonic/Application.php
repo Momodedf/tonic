@@ -88,7 +88,7 @@ class Application
         foreach (get_declared_classes() as $className) {
             if (
                 !isset($this->resources[$className]) &&
-                is_subclass_of($className, 'Tonic\Resource')
+                is_subclass_of($className, 'Tonic\ApiResource')
             ) {
                 $rm = new ResourceMetadata($className);
                 if ($rm->getUri()) {
@@ -214,7 +214,7 @@ class Application
 
     /**
      * Get the already loaded resource annotation metadata
-     * @param  Tonic/Resource $resource
+     * @param  Tonic/ApiResource $resource
      * @return ResourceMetadata
      */
     public function getResourceMetadata($resource)

@@ -2,7 +2,7 @@
 
 namespace Tonic;
 
-class Issue122Base extends Resource {
+class Issue122Base extends ApiResource {
 
     protected function routemethod($method)
     {

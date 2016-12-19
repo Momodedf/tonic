@@ -1,11 +1,11 @@
 <?php
 namespace Issue154;
 
-use Tonic\Resource;
+use Tonic\ApiResource;
 
 /**
  * WITHOUT @uri /issue154
  */
-class WithoutAnnotation extends Resource {
+class WithoutAnnotation extends ApiResource {
 
 }

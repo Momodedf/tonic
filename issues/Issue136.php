@@ -2,7 +2,7 @@
 
 namespace Tonic;
 
-class Issue136Base extends Resource {
+class Issue136Base extends ApiResource {
 
     /**
      * @method GET

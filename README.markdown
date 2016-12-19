@@ -170,7 +170,7 @@ one URI for the same resource:
      * @uri /example/apple
      * @priority 2
      */
-    class AnotherExampleResource extends Tonic\Resource { }
+    class AnotherExampleResource extends Tonic\ApiResource { }
 
 By using the @priority annotation with a number, of all the matching resources,
 the one with the highest postfixed number will be used.
@@ -403,7 +403,7 @@ resource and an "object" resource to store within it:
     /**
      * @uri /objects
      */
-    class ObjectCollection extends Tonic\Resource {
+    class ObjectCollection extends Tonic\ApiResource {
 
         /**
          * @method GET
@@ -429,7 +429,7 @@ resource and an "object" resource to store within it:
     /**
      * @uri /objects/:id
      */
-    class Object extends Tonic\Resource {
+    class Object extends Tonic\ApiResource {
 
         /**
          * @method GET
@@ -493,7 +493,7 @@ Need to secure a resource? Something like the following is a good pattern.
     /**
      * @uri /secret
      */
-    class SecureResource extends Tonic\Resource {
+    class SecureResource extends Tonic\ApiResource {
 
         /**
          * @method GET
@@ -533,7 +533,7 @@ all of its request methods are secured regardless of annotations.
     /**
      * @uri /secret
      */
-    class SecureResource extends Tonic\Resource {
+    class SecureResource extends Tonic\ApiResource {
 
         private $username = 'aUser';
         private $password = 'aPassword';
@@ -566,7 +566,7 @@ after filter to pass the response through a templating engine like Smarty or Twi
     /**
      * @uri /templated
      */
-    class Templated extends Tonic\Resource {
+    class Templated extends Tonic\ApiResource {
 
         /**
          * @method GET

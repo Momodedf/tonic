@@ -6,7 +6,7 @@ namespace Tonic;
  *
  * @uri /issue146
  */
-class Issue146 extends Resource {
+class Issue146 extends ApiResource {
 
     /**
      * @method GET

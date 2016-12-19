@@ -10,7 +10,7 @@ use PhpSpec\ObjectBehavior;
  * @priority 10
  * @namespace myNamespace
  */
-class ExampleResource extends \Tonic\Resource
+class ExampleResource extends \Tonic\ApiResource
 {
     /**
      * @method GET

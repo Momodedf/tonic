@@ -2,7 +2,7 @@
 
 namespace Tyrell;
 
-use Tonic\Resource,
+use Tonic\ApiResource,
     Tonic\Response;
 
 /**
@@ -13,7 +13,7 @@ use Tonic\Resource,
  *
  * @uri /
  */
-class Welcome extends Resource
+class Welcome extends ApiResource
 {
     /**
      * Returns the welcome message.

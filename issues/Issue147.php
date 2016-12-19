@@ -2,7 +2,7 @@
 
 namespace Tonic;
 
-class Issue147Foundation extends Resource {
+class Issue147Foundation extends ApiResource {
 
     protected $thing = 0;
     protected $otherthing = null;

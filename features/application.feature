@@ -56,7 +56,7 @@ Feature: A Tonic application
        *** @uri /annotation3
        * @uri      /annotation4   
        */
-      class AnnotationTest extends Tonic\Resource {}
+      class AnnotationTest extends Tonic\ApiResource {}
       """
     When I create an application object
     Then the resource "AnnotationTest" should have the URI "/annotation"

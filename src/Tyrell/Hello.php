@@ -2,7 +2,7 @@
 
 namespace Tyrell;
 
-use Tonic\Resource,
+use Tonic\ApiResource,
     Tonic\Response,
     Tonic\ConditionException;
 
@@ -15,7 +15,7 @@ use Tonic\Resource,
  * @uri /hello
  * @uri /hello/:name
  */
-class Hello extends Resource
+class Hello extends ApiResource
 {
     /**
      * Use this method to handle GET HTTP requests.

@@ -9,7 +9,7 @@ use Behat\Gherkin\Node\PyStringNode,
 
 use Tonic\Application,
     Tonic\Request,
-    Tonic\Resource,
+    Tonic\ApiResource,
     Tonic\Response;
 
 /**

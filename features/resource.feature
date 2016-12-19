@@ -101,7 +101,7 @@ Feature: HTTP resource object
       /**
        * @uri /resource6
        */
-      class Resource6 extends Tonic\Resource {
+      class Resource6 extends Tonic\ApiResource {
         /**
          * @method get
          * @foo bar baz quux
@@ -128,7 +128,7 @@ Feature: HTTP resource object
       /**
        * @uri /resource7
        */
-      class Resource7 extends Tonic\Resource {
+      class Resource7 extends Tonic\ApiResource {
         /**
          * @method get
          * @myBeforeFilter
@@ -162,7 +162,7 @@ Feature: HTTP resource object
       /**
        * @uri /resource8
        */
-      class Resource8 extends Tonic\Resource {
+      class Resource8 extends Tonic\ApiResource {
         /**
          * @method get
          * @foo
@@ -205,7 +205,7 @@ Feature: HTTP resource object
       /**
        * @uri /resource9
        */
-      class Resource9 extends Tonic\Resource {
+      class Resource9 extends Tonic\ApiResource {
         /**
          * @method get
          * @foo
@@ -247,7 +247,7 @@ Feature: HTTP resource object
       /**
        * @uri /resource10
        */
-      class Resource10 extends Tonic\Resource {
+      class Resource10 extends Tonic\ApiResource {
         /**
          * @method get
          * @foo param1 "param 2"

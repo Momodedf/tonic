@@ -6,7 +6,7 @@ namespace Tonic;
  *
  * @uri /issue134/nocache
  */
-class Issue134NoCache extends Resource {
+class Issue134NoCache extends ApiResource {
 
     /**
      * @method GET
@@ -23,7 +23,7 @@ class Issue134NoCache extends Resource {
  *
  * @uri /issue134/cache
  */
-class Issue134Cache extends Resource {
+class Issue134Cache extends ApiResource {
 
     /**
      * @method GET

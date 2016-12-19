@@ -6,7 +6,7 @@ namespace Tonic;
  *
  * @uri /issue140
  */
-class Issue140 extends Resource {
+class Issue140 extends ApiResource {
 
     private $thing;
 

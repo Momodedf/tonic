@@ -5,7 +5,7 @@ namespace Tonic;
 /**
  * Model a HTTP resource
  */
-class Resource
+class ApiResource
 {
     protected $app, $request;
     public $params;

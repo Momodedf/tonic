@@ -2,7 +2,7 @@
 
 namespace Tyrell;
 
-use Tonic\Resource;
+use Tonic\ApiResource;
 
 /**
  * Example of how to handle all URLs with a single resource.
@@ -12,7 +12,7 @@ use Tonic\Resource;
  * @uri /everything
  * @uri /everything/(.*)
  */
-class Everything extends Resource
+class Everything extends ApiResource
 {
     /**
      * Request/response method to handle every GET request

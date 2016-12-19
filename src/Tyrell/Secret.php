@@ -12,7 +12,7 @@ use Tonic;
  *
  * @uri /secret
  */
-class Secret extends Tonic\Resource {
+class Secret extends Tonic\ApiResource {
 
     /**
      * Resource method to handle GET request and return the secret only if the user
@@ -55,7 +55,7 @@ class Secret extends Tonic\Resource {
  *
  * @uri /secret2
  */
-class TotallySecureResource extends Tonic\Resource {
+class TotallySecureResource extends Tonic\ApiResource {
 
     private $username = 'aUser2';
     private $password = 'aPassword2';
