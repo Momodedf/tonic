@@ -150,7 +150,6 @@ class Application
      * Given the request data and the loaded resource metadata, pick the best matching
      * resource to handle the request based on URI and priority.
      *
-     * @deprecated You should use the route method instead.
      * @param  Request  $request
      * @return Resource
      */
@@ -161,12 +160,7 @@ class Application
         }
 
         $route = $this->route($request);
-        $filename = $route->getFilename();
         $className = $route->getClass();
-
-        if ($filename && is_readable($filename)) {
-            require_once($filename);
-        }
 
         return new $className($this, $request);
     }
