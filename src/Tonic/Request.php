@@ -347,7 +347,11 @@ class Request
         krsort($accept);
         foreach ($accept as $parts) {
             foreach ($parts as $part) {
-                $acceptArray[] = trim($part);
+                $cleanPart = trim($part);
+                $acceptArray[] = $cleanPart;
+
+                $partAlias = array_search($cleanPart, $this->mimetypes);
+                if($partAlias) $acceptArray[] = $partAlias;
             }
         }
 
