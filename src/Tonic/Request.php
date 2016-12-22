@@ -293,7 +293,9 @@ class Request
         if (!$uri) { // use given URI in config options
             if (isset($_SERVER['REDIRECT_URL']) && isset($_SERVER['SCRIPT_NAME'])) { // use redirection URL from Apache environment
                 $dirname = dirname($_SERVER['SCRIPT_NAME']);
-                $uri = substr($_SERVER['REDIRECT_URL'], strlen($dirname == DIRECTORY_SEPARATOR ? '' : $dirname));
+                // Necessary for windows server, since REDIRECT_URL is a URL on windows vs URI on unix
+                $baseuri = (is_null(parse_url($_SERVER['REDIRECT_URL'], PHP_URL_HOST))) ? $_SERVER['REDIRECT_URL'] : parse_url($_SERVER['REDIRECT_URL'], PHP_URL_PATH);
+                $uri = substr($baseuri, strlen($dirname == DIRECTORY_SEPARATOR ? '' : $dirname));
             } elseif (isset($_SERVER['REQUEST_URI'])) { // use request URI from environment
                 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
             } elseif (isset($_SERVER['PHP_SELF']) && isset($_SERVER['SCRIPT_NAME'])) { // use PHP_SELF from Apache environment
