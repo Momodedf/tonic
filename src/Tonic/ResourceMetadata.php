@@ -190,7 +190,7 @@ class ResourceMetadata implements \ArrayAccess
         if ($items && isset($items[1])) {
             foreach ($items[1] as $item) {
                 $parts = explode(' ', $item);
-                $key = array_shift($parts);
+                $key = trim(array_shift($parts));
                 $data[$key][] = trim(implode(' ', $parts));
             }
         }
