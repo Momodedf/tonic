@@ -4,6 +4,6 @@ namespace Tonic;
 
 class UnauthorizedException extends Exception
 {
-    protected $code = 401;
+    protected $code = Response::UNAUTHORIZED;
     protected $message = 'The request requires user authentication';
 }

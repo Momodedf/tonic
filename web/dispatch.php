@@ -46,7 +46,6 @@ try {
 
 } catch (Tonic\NoContentException $e) {
     $response = new Tonic\Response($e->getCode(), $e->getMessage());
-    $response->allow = implode(', ', $resource->allowedMethods());
 
 } catch (Tonic\Exception $e) {
     $response = new Tonic\Response($e->getCode(), $e->getMessage());
